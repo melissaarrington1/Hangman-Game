@@ -5,6 +5,7 @@ body {
 canvas {
     display: grid;
     grid-row: 600px;
+    margin-left: 300px;
     border: solid 1px;
     width: 300px;
     background-color: white;
@@ -48,4 +49,8 @@ canvas {
 .row3 {
     display: space-around;
     margin-left: 90px;
+}
+.word-container {
+    font-size: 80px;
+    margin-left: 340px;
 }

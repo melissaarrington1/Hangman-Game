@@ -8,25 +8,30 @@ var alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p',
 's','t','u','v','w','x','y','z']
 
 //Select a random word below..
-var wordSelection = ['Kim Karsashian', 'Kylie Jenner', 'Rihanna'];
+var wordSelection = ['Kim Kardashian', 'Kylie Jenner', 'Rihanna'];
 var word = wordSelection[Math.floor(Math.random() * wordSelection.length)];
+var wordContainer = document.getElementsByClassName('word-container')[0];
+
+
 
 
 //for loop to cycle through words in array
 var answers = [];
 for (var i = 0; i  < word.length; i++) {
-    answers[i] = "_";
+    answers[i] = "_ ";
+    wordContainer.innerHTML += answers[i]
+    
 }
 var remaining = word.length;
-
-while (remaining > 0) {
-    alert(answers.join(''));
-}
+document.body.innerHTML(answers.join(''))
+console.log(answers)
+// while (remaining > 0) {
+//     alert(answers.join(''));
+// }
 
 var guess = prompt('Guess a letter!!');
 if (guess == null) {
     //exit the game
-    break;
 } else if (guess.length !== 1) {
     alert('please enter in a single letter');
 } else {
@@ -39,10 +44,18 @@ if (guess == null) {
     }
 }
 
-alert(answers.join(''));
-alert("good job!!!")
+//alert(answers.join(''));
+//alert("good job!!!")
 // so, we need to figure out how to get the "hangman" to display. Let's use canvas..
 //function to hide "start"
+
+for (let i = 0; i < word.length; i++) {
+	if (word[i] === 'e') {
+		console.log(word[i])
+        console.log(i)
+}
+
+}
 function hideStart() {
     var x = document.getElementById("start");
     if (x.style.display === "none") {
@@ -52,14 +65,16 @@ function hideStart() {
     }
 }
 
+var A = document.querySelector('A')
+A.addEventListener('click', function(){
+    wordContainer.innerHTML = "A"
+})
 
 
-
-
-
-
-
-
+function clickKey(k) {
+    for (let i=0; i < alphabet.length; i++) 
+    console.log(k)
+}
 
 
 
