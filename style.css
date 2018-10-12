@@ -1,0 +1,51 @@
+body {
+    background-color: cornflowerblue;
+}
+
+canvas {
+    display: grid;
+    grid-row: 600px;
+    border: solid 1px;
+    width: 300px;
+    background-color: white;
+}
+
+.start {
+    font-size: 40px;
+    text-align: center;
+    margin-top: 120px;
+}
+
+.keyboard{ 
+    margin-left: 400px;
+    margin-top: 100px;
+    /*background-color: rgb(70, 70, 168); */
+}
+
+.key {
+
+    display: inline-block;
+    border-color: rgb(70, 70, 168);
+    border-radius: 50px;
+    height: 65px;
+    width: 65px;
+    text-align: center;
+    font-size: 30px;
+    background-color: rgb(70, 70, 168);
+}
+
+.row1 {
+    display: space-around;
+
+}
+
+.row2 {
+    display: space-around;
+    margin-left: 30px;
+
+}
+
+.row3 {
+    display: space-around;
+    margin-left: 90px;
+}

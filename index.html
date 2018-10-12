@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HangMan</title>
+    <link rel="stylesheet" href="style.css">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="title">Hang, Man!</div>
+        
+        <canvas id="canvas"></canvas>
+        <div class="categories" id="category"></div>
+        <button id="pop">Pop Culture</button>
+        <button id="music">Music</button>
+        <button id="places">Places</button>
+        <button id="brands">Brands</button>
+    </div>
+    <div class="start animated infinite pulse" id="start" onclick="hideStart()">Press Any Key to Get Started!</div>
+    <div class="keyboard">
+        <div class='row1'>
+            <input class="key" type="button" value='Q'>
+            <input class="key" type="button" value='W'>
+            <input class="key" type="button" value='E'>
+            <input class="key" type="button" value='R'>
+            <input class="key" type="button" value='T'>
+            <input class="key" type="button" value='Y'>
+            <input class="key" type="button" value='U'>
+            <input class="key" type="button" value='I'>
+            <input class="key" type="button" value='O'>
+            <input class="key" type="button" value='P'>
+        </div>
+        <br>
+        <div class='row2'>
+            <input class="key" type="button" data-key='65' value='A'>
+            <input class="key" type="button" value='S'>
+            <input class="key" type="button" value='D'>
+            <input class="key" type="button" value='F'>
+            <input class="key" type="button" value='G'>
+            <input class="key" type="button" value='H'>
+            <input class="key" type="button" value='J'>
+            <input class="key" type="button" value='K'>
+            <input class="key" type="button" value='L'>
+        </div>
+        <br>
+        <div class='row3'>
+            <input class="key" type="button" value='Z'>
+            <input class="key" type="button" value='X'>
+            <input class="key" type="button" value='C'>
+            <input class="key" type="button" value='V'>
+            <input class="key" type="button" value='B'>
+            <input class="key" type="button" value='N'>
+            <input class="key" type="button" value='M'>
+        </div>
+    </div>
+    <script src="main.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
