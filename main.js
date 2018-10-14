@@ -1,8 +1,11 @@
 //Let's make sure that it is working...
 console.log('Welcome to Hangman!')
 
-//first, we need to set variables
+//first, we need to create variables to determine lives, letters, and guesses
 const lives = 0;
+var wins = 0;
+var losses = 0;
+var guessesLeft = 0;
 var word = '';
 var alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r',
 's','t','u','v','w','x','y','z']
@@ -12,6 +15,9 @@ var wordSelection = ['Kim Kardashian', 'Kylie Jenner', 'Rihanna'];
 var word = wordSelection[Math.floor(Math.random() * wordSelection.length)];
 var wordContainer = document.getElementsByClassName('word-container')[0];
 
+//function to see if win
+
+//function to see if lose
 
 
 
@@ -56,6 +62,9 @@ for (let i = 0; i < word.length; i++) {
 }
 
 }
+
+
+//This is the function to Press Key to Start Game
 function hideStart() {
     var x = document.getElementById("start");
     if (x.style.display === "none") {
