@@ -6,13 +6,25 @@ const lives = 0;
 var wins = 0;
 var losses = 0;
 var guessesLeft = 0;
+var isGameRunning;
 var word = '';
+var wordSelection = ['Kim Kardashian', 'Kylie Jenner', 'Rihanna'];
 var alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r',
 's','t','u','v','w','x','y','z']
 var livesLeft;
+
+//Create function to start/restart a new game
+function Game() {
+    isGameRunning = true;
+    guessesLeft = 10;
+    guessedLetters = [];
+    incorrectLetters = [];
+    wordPicked = [];
+}
+
 //Select a random word below..
-var wordSelection = ['Kim Kardashian', 'Kylie Jenner', 'Rihanna'];
-var word = wordSelection[Math.floor(Math.random() * wordSelection.length)];
+word = wordSelection[Math.floor(Math.random() * wordSelection.length)];
+
 var wordContainer = document.getElementsByClassName('word-container')[0];
 
 //function to see if win
