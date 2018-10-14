@@ -6,7 +6,7 @@ const lives = 0;
 var word = '';
 var alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r',
 's','t','u','v','w','x','y','z']
-
+var livesLeft;
 //Select a random word below..
 var wordSelection = ['Kim Kardashian', 'Kylie Jenner', 'Rihanna'];
 var word = wordSelection[Math.floor(Math.random() * wordSelection.length)];
