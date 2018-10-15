@@ -11,10 +11,11 @@ var guessesLeft = 6;
 var isGameRunning = false;
 //var wordContainer = document.querySelector('wordContainer')
 var word = '';
-var wordSelection = ['Kim    Kardashian', 'Kylie    Jenner', 'Rihanna'];
+var wordSelection = ['Kim  Kardashian', 'Kylie  Jenner', 'Rihanna', 'Beyonce'];
 var wordSelectionSpaces = [];
 var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r',
-    's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+    's', 't', 'u', 'v', 'w', 'x', 'y', 'z'
+]
 var guessedLetter = [];
 var guessedIncorrect = [];
 
@@ -64,8 +65,8 @@ function startGame() {
 //var wordContainer = document.getElementsByClassName('word-container')[0];
 function letterAttempt(letter) {
 
-    
-    console.log(letter);
+
+    //console.log(letter);
 
     if (isGameRunning === true) {
         //run game
@@ -75,15 +76,14 @@ function letterAttempt(letter) {
             if (word[i].toLocaleLowerCase() === letter.toLocaleLowerCase()) {
                 foundLetter = true;
                 wordSelectionSpaces[i] = word[i];
-            }
-            else {
+            } else {
                 numofGuessesLeft.innerHTML = guessesLeft--;
             }
         }
         spaces.textContent = wordSelectionSpaces.join('');
-    // } else {
-    //     alert("Click START GAME")
-    //     //numofGuessesLeft.innerHTML = guessesLeft--;
+        // } else {
+        //     alert("Click START GAME")
+        //     //numofGuessesLeft.innerHTML = guessesLeft--;
     }
 
 
@@ -91,17 +91,17 @@ function letterAttempt(letter) {
     var answers = [];
     for (var i = 0; i < word.length; i++) {
         answers[i] = "_ ";
-      //  wordContainer.innerHTML += answers[i]
+        //  wordContainer.innerHTML += answers[i]
 
     }
 }
 
 function incorrect(letter) {
-    if (wordSelectionSpaces.indexOf(letter.toLowerCase()) === -1) 
-    //wordSelectionSpaces.indexOf(letter) {
+    if (wordSelectionSpaces.indexOf(letter.toLowerCase()) === -1)
+        //wordSelectionSpaces.indexOf(letter) {
         numofGuessesLeft.innerHTML--;
-        numofGuessesLeft.textContent = guessesLeft;
-    }
+    numofGuessesLeft.textContent = guessesLeft;
+}
 
 //function to see if win
 
@@ -151,25 +151,30 @@ function incorrect(letter) {
 //     wordContainer.innerHTML = "A"
 // })
 
+//const key = document.querySelectorAll('.key')
 
-function clickKey() {
-    for (let i = 0; i < word.length; i++) {
-    if (word.includes('q')) {
-        console.log(letterAttempt)
-    }
-    else {
-        console.log()
-    }
-    
+const key = document.querySelectorAll('.key')
+
+for (let i = 0; i < key.length; i++) {
+    key[i].addEventListener('click', function (e) {
+        console.log('click')
+        console.log(e.target.id)
+        letterAttempt(e.target.id)
+    //     // if (word[i].includes([i])) {
+    //     //     console.log(letterAttempt(letter))
+    //     // } else {
+    //     //     console.log('Nope')
+    //     // }
+    })
 }
-}
+
 
 
 
 document.onkeyup = function (event) {
     if (event.keyCode >= 65 && event.keyCode <= 90) {
         startGame(event.key);
-        
+
     }
 }
 
