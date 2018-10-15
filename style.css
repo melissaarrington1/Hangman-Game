@@ -67,6 +67,7 @@ canvas {
 #guesses-left {
     font-size: 30px;
     color: whitesmoke;
+    margin-left: 70px;
 }
 .key {
     font-family: 'Wellfleet', cursive;

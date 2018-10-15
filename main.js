@@ -1,7 +1,7 @@
 //Let's make sure that it is working...
 console.log('Welcome to Hangman!')
 
-var numofGuessesLeft = document.getElementsByClassName('guesses-left');
+var numofGuessesLeft = document.getElementById('guesses-left');
 var spaces = document.getElementById('spaces')
 //first, we need to create variables to determine lives, letters, and guesses
 const lives = 0;
@@ -18,15 +18,15 @@ var guessedLetter = [];
 var guessedIncorrect = [];
 
 //variable for canvas
-var canvas = document.getElementById('canvas-id');
-var context = canvas.getContext('2d');
-context.strokeStyle = 'purple';
-context.lineWidth = '3';
-context.fillStyle = 'yellow';
-context.fillRect(100, 100, 50, 100);
-context.moveTo(0,300);
-context.lineTo(400,500);
-stroke();
+// var canvas = document.getElementById('canvas-id');
+// var context = canvas.getContext('2d');
+// context.strokeStyle = 'purple';
+// context.lineWidth = '3';
+// context.fillStyle = 'yellow';
+// context.fillRect(100, 100, 50, 100);
+// context.moveTo(0,300);
+// context.lineTo(400,500);
+// stroke();
 
 //Create function to start/restart a new game
 function Game() {
@@ -62,6 +62,8 @@ function startGame() {
 
 //var wordContainer = document.getElementsByClassName('word-container')[0];
 function letterAttempt(letter) {
+
+    
     console.log(letter);
 
     if (isGameRunning === true) {
@@ -75,6 +77,7 @@ function letterAttempt(letter) {
         spaces.textContent = wordSelectionSpaces.join('');
     } else {
         alert("Click START GAME")
+        numofGuessesLeft.textContent(guessesLeft --);
     }
 
 
@@ -90,7 +93,7 @@ function letterAttempt(letter) {
 function incorrect(letter) {
     if (wordSelectionSpaces.indexOf(letter.toLowerCase()) === -1) 
     //wordSelectionSpaces.indexOf(letter) {
-        guessesLeft--;
+        numofGuessesLeft.innerHTML--;
         numofGuessesLeft.textContent = guessesLeft;
     }
 
@@ -106,20 +109,20 @@ function incorrect(letter) {
 // //     alert(answers.join(''));
 // // }
 
-// var guess = prompt('Guess a letter!!');
-// if (guess == null) {
-//     //exit the game
-// } else if (guess.length !== 1) {
-//     alert('please enter in a single letter');
-// } else {
-//     //update game with guess
-//     for (g = 0; g < word.length; g++) {
-//         if (word[g] === guess) {
-//             answers[g] = guess;
-//             remaining--;
-//         }
-//     }
-// }
+//var guess = prompt('Guess a letter!!');
+if (guess == null) {
+    //exit the game
+} else if (guess.length !== 1) {
+    alert('please enter in a single letter');
+} else {
+    //update game with guess
+    for (g = 0; g < word.length; g++) {
+        if (word[g] === guess) {
+            answers[g] = guess;
+            guessesleft--;
+        }
+    }
+}
 
 // //alert(answers.join(''));
 // //alert("good job!!!")
