@@ -73,7 +73,7 @@ canvas {
     width: 65px;
     text-align: center;
     font-size: 30px;
-    background-color: rgb(70, 70, 168);
+    background-color: rgba(70, 70, 168, 0.767);
 }
 
 .row1 {
@@ -99,4 +99,5 @@ canvas {
     font-size: 80px;
     color: whitesmoke;
     margin-left: 450px;
+    
 }
