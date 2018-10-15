@@ -58,8 +58,8 @@ function letterAttempt(letter) {
         //run game
         guessedLetter.push(letter);
         for (var i = 0; i < word.length; i++) {
-            if (word[i]) {
-                wordSelectionSpaces[i] === word[i];
+            if (word[i].toLocaleLowerCase() === letter.toLocaleLowerCase()) {
+                wordSelectionSpaces[i] = word[i];
             }
         }
         spaces.textContent = wordSelectionSpaces.join('');
@@ -75,74 +75,79 @@ function letterAttempt(letter) {
         wordContainer.innerHTML += answers[i]
 
     }
+}
 
 
 
-    //function to see if win
+//function to see if win
 
-    //function to see if lose
-
-
-    // var remaining = word.length;
-    // document.body.innerHTML(answers.join(''))
-    // console.log(answers)
-    // // while (remaining > 0) {
-    // //     alert(answers.join(''));
-    // // }
-
-    // var guess = prompt('Guess a letter!!');
-    // if (guess == null) {
-    //     //exit the game
-    // } else if (guess.length !== 1) {
-    //     alert('please enter in a single letter');
-    // } else {
-    //     //update game with guess
-    //     for (g = 0; g < word.length; g++) {
-    //         if (word[g] === guess) {
-    //             answers[g] = guess;
-    //             remaining--;
-    //         }
-    //     }
-    // }
-
-    // //alert(answers.join(''));
-    // //alert("good job!!!")
-    // // so, we need to figure out how to get the "hangman" to display. Let's use canvas..
-    // //function to hide "start"
-
-    // for (let i = 0; i < word.length; i++) {
-    // 	if (word[i] === 'e') {
-    // 		console.log(word[i])
-    //         console.log(i)
-    // }
-
-    // }
+//function to see if lose
 
 
+// var remaining = word.length;
+// document.body.innerHTML(answers.join(''))
+// console.log(answers)
+// // while (remaining > 0) {
+// //     alert(answers.join(''));
+// // }
 
+// var guess = prompt('Guess a letter!!');
+// if (guess == null) {
+//     //exit the game
+// } else if (guess.length !== 1) {
+//     alert('please enter in a single letter');
+// } else {
+//     //update game with guess
+//     for (g = 0; g < word.length; g++) {
+//         if (word[g] === guess) {
+//             answers[g] = guess;
+//             remaining--;
+//         }
+//     }
+// }
 
-    // var A = document.querySelector('A')
-    // A.addEventListener('click', function(){
-    //     wordContainer.innerHTML = "A"
-    // })
+// //alert(answers.join(''));
+// //alert("good job!!!")
+// // so, we need to figure out how to get the "hangman" to display. Let's use canvas..
+// //function to hide "start"
 
+// for (let i = 0; i < word.length; i++) {
+// 	if (word[i] === 'e') {
+// 		console.log(word[i])
+//         console.log(i)
+// }
 
-    // function clickKey(k) {
-    //     for (let i=0; i < alphabet.length; i++) 
-    //     console.log(k)
-    // }
+// }
 
 
 
-    document.onkeyup = function (event) {
-        if (event.keyCode >= 65 && event.keyCode <= 90) {
-            Game(event.key);
-        }
+
+// var A = document.querySelector('A')
+// A.addEventListener('click', function(){
+//     wordContainer.innerHTML = "A"
+// })
+
+
+// function clickKey(k) {
+//     for (let i=0; i < alphabet.length; i++) 
+//     console.log(k)
+// }
+
+document.onkeyup = function (event) {
+    if (event.keyCode >= 65 && event.keyCode <= 90) {
+        startGame(event.key);
     }
+}
 
-    document.getElementById('start').addEventListener('click', Game);
+document.onkeyup = function (event) {
+    if (event.keyCode >= 65 && event.keyCode <= 90) {
+        letterAttempt(event.key);
+    }
+}
+
+document.getElementById('start').addEventListener('click', Game);
 
 
-    // window.addEventListener('keydown',function(e) {
-    //     console.log(e)
-    // })
+// window.addEventListener('keydown',function(e) {
+//     console.log(e)
+// })
