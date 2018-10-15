@@ -160,11 +160,11 @@ for (let i = 0; i < key.length; i++) {
         console.log('click')
         console.log(e.target.id)
         letterAttempt(e.target.id)
-    //     // if (word[i].includes([i])) {
-    //     //     console.log(letterAttempt(letter))
-    //     // } else {
-    //     //     console.log('Nope')
-    //     // }
+        //     // if (word[i].includes([i])) {
+        //     //     console.log(letterAttempt(letter))
+        //     // } else {
+        //     //     console.log('Nope')
+        //     // }
     })
 }
 
