@@ -32,7 +32,7 @@ function Game() {
         if (word[i] === ' ') {
             wordSelectionSpaces.push(' ');
         } else {
-            wordSelectionSpaces.push('_');
+            wordSelectionSpaces.push('_ ');
         }
     }
     guessesLeft.textContent = guessesLeft;

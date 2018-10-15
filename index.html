@@ -4,30 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-responsive.css">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>HangMan</title>
+    <title>HangMan!</title>
     <link rel="stylesheet" href="style.css">
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Wellfleet" rel="stylesheet">
 </head>
 
 <body>
     <div class="container">
-        <div class="title">Hang, Man!</div>
+        <div class="title">HANGMAN!</div>
         
         <canvas id="canvas"></canvas>
         <div class="categories" id="category">
-        <button id="pop">Pop Culture</button>
+        <!-- <button id="pop">Pop Culture</button>
         <button id="music">Music</button>
         <button id="places">Places</button>
-        <button id="brands">Brands</button>
+        <button id="brands">Brands</button> -->
     </div>
     </div>
     <div id="spaces"></div>
     <div class="word-container"></div>
-    <div class="start animated infinite pulse" id="start" onclick="startGame()">Press Any Key to Get Started!</div>
-    <div class="guesses-left">Guesses Left: </div>
+    <div class="start animated infinite pulse" id="start" onclick="startGame()">Click Here to Start Game!</div>
+    <div class="guesses-left">Guesses Left: 
+        <br>
+        6</div>
     <div class="keyboard">
         <div class='row1'>
             <input class="key" id="Q" type="button" onclick="clickKey(this.innerHTML)"value='Q'>

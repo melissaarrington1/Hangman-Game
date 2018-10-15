@@ -1,16 +1,26 @@
 body {
-    background-color: cornflowerblue;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(64, 64, 194);
 }
 
 canvas {
     display: grid;
     grid-row: 600px;
+    margin-top: 100px;
     margin-left: 300px;
     border: solid 1px;
     width: 300px;
-    background-color: white;
+    background-color: rgb(212, 220, 221);
 }
-
+.title {
+    font-size: 100px;
+    text-align: center;
+    line-height: 1em;
+    color: whitesmoke;
+    text-shadow: 0 1px 0 #efefefd3, 0 2px 0 gray,
+    0 3px 0 gray, 0 4px 0 gray, 0 30px 5px rgba(0,0,0,.1);
+}
 .start {
     font-size: 40px;
     text-align: center;
@@ -18,15 +28,20 @@ canvas {
 }
 
 .keyboard{ 
-    margin-left: 400px;
-    margin-top: 100px;
+    position: relative;
+    margin-left: 330px;
+    margin-bottom: 100px;
+    width: 800px;
+    border: solid;
+    background-color: darkblue;
+    padding: 50px;
     /*background-color: rgb(70, 70, 168); */
 }
 .guesses-left {
     font-size: 30px;
 }
 .key {
-
+    font-family: 'Wellfleet', cursive;
     display: inline-block;
     border-color: rgb(70, 70, 168);
     border-radius: 50px;
@@ -58,5 +73,5 @@ canvas {
 }
 #spaces {
     font-size: 80px;
-    margin-left: 340px;
+    margin-left: 450px;
 }
