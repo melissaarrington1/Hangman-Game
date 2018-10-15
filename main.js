@@ -11,7 +11,7 @@ var guessesLeft = 6;
 var isGameRunning = false;
 //var wordContainer = document.querySelector('wordContainer')
 var word = '';
-var wordSelection = ['Kim  Kardashian', 'Kylie  Jenner', 'Rihanna', 'Beyonce'];
+var wordSelection = ['Kim  Kardashian', 'Kylie  Jenner', 'Rihanna'];
 var wordSelectionSpaces = [];
 var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r',
     's', 't', 'u', 'v', 'w', 'x', 'y', 'z'
