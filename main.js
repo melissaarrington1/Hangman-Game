@@ -1,26 +1,42 @@
 //Let's make sure that it is working...
 console.log('Welcome to Hangman!')
 
+var numofGuessesLeft = document.getElementsByClassName('guesses-left');
+var spaces = document.getElementById('spaces')
 //first, we need to create variables to determine lives, letters, and guesses
 const lives = 0;
 var wins = 0;
 var losses = 0;
-var guessesLeft = 0;
+var guessesLeft = 6;
 var isGameRunning = false;
 var word = '';
 var wordSelection = ['Kim Kardashian', 'Kylie Jenner', 'Rihanna'];
 var wordSelectionSpaces = [];
 var alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r',
 's','t','u','v','w','x','y','z']
-var livesLeft;
+var guessedLetter = [];
+var guessedIncorrect = [];
 
 //Create function to start/restart a new game
 function Game() {
     isGameRunning = true;
-    guessesLeft = 10;
+    guessesLeft = 6;
     guessedLetters = [];
     incorrectLetters = [];
-    wordPicked = [];
+    wordSelectionSpaces = [];
+    //Select a random word below..
+    word = wordSelection[Math.floor(Math.random() * wordSelection.length)];
+
+    for (var i = 0; i < wordSelection.length; i++) {
+        if (word[i] === ' ') {
+            wordSelectionSpaces.push(' ');
+        } else {
+            wordSelectionSpaces.push('_');
+        }
+    }
+    guessesLeft.textContent = guessesLeft;
+    spaces.textContent = wordSelectionSpaces.join('');
+
 }
 //This is the function to Press Key to Start Game
 function hideStart() {
@@ -32,24 +48,10 @@ function hideStart() {
     }
 }
 
-//Select a random word below..
-word = wordSelection[Math.floor(Math.random() * wordSelection.length)];
+
 
 var wordContainer = document.getElementsByClassName('word-container')[0];
 
-for (var i = 0; i < wordSelection.length; i++) {
-    if (wordSelection[i] === ' ') {
-        wordSelectionSpaces.push(' ');
-    } else {
-        wordSelectionSpaces.push('_');
-    }
-}
-
-
-
-//function to see if win
-
-//function to see if lose
 
 
 
@@ -60,6 +62,14 @@ for (var i = 0; i  < word.length; i++) {
     wordContainer.innerHTML += answers[i]
     
 }
+
+
+
+//function to see if win
+
+//function to see if lose
+
+
 // var remaining = word.length;
 // document.body.innerHTML(answers.join(''))
 // console.log(answers)
@@ -117,7 +127,7 @@ document.onkeyup = function(event) {
     }
 }
 
-
+document.getElementById('start').addEventListener('click', Game);
 
 
 // window.addEventListener('keydown',function(e) {

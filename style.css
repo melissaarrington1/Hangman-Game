@@ -22,7 +22,9 @@ canvas {
     margin-top: 100px;
     /*background-color: rgb(70, 70, 168); */
 }
-
+.guesses-left {
+    font-size: 30px;
+}
 .key {
 
     display: inline-block;
@@ -51,6 +53,10 @@ canvas {
     margin-left: 90px;
 }
 .word-container {
+    font-size: 80px;
+    margin-left: 340px;
+}
+#spaces {
     font-size: 80px;
     margin-left: 340px;
 }
