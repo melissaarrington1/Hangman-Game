@@ -17,6 +17,9 @@ var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
 var guessedLetter = [];
 var guessedIncorrect = [];
 
+//variable for canvas
+var canvas = document.getElementById('canvas-id');
+
 //Create function to start/restart a new game
 function Game() {
     isGameRunning = true;
