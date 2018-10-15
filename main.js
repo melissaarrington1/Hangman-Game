@@ -9,6 +9,7 @@ var wins = 0;
 var losses = 0;
 var guessesLeft = 6;
 var isGameRunning = false;
+//var wordContainer = document.querySelector('wordContainer')
 var word = '';
 var wordSelection = ['Kim    Kardashian', 'Kylie    Jenner', 'Rihanna'];
 var wordSelectionSpaces = [];
@@ -69,15 +70,20 @@ function letterAttempt(letter) {
     if (isGameRunning === true) {
         //run game
         guessedLetter.push(letter);
+        let foundLetter = false;
         for (var i = 0; i < word.length; i++) {
             if (word[i].toLocaleLowerCase() === letter.toLocaleLowerCase()) {
+                foundLetter = true;
                 wordSelectionSpaces[i] = word[i];
+            }
+            else {
+                numofGuessesLeft.innerHTML = guessesLeft--;
             }
         }
         spaces.textContent = wordSelectionSpaces.join('');
-    } else {
-        alert("Click START GAME")
-        numofGuessesLeft.textContent(guessesLeft --);
+    // } else {
+    //     alert("Click START GAME")
+    //     //numofGuessesLeft.innerHTML = guessesLeft--;
     }
 
 
@@ -85,7 +91,7 @@ function letterAttempt(letter) {
     var answers = [];
     for (var i = 0; i < word.length; i++) {
         answers[i] = "_ ";
-        wordContainer.innerHTML += answers[i]
+      //  wordContainer.innerHTML += answers[i]
 
     }
 }
@@ -110,19 +116,19 @@ function incorrect(letter) {
 // // }
 
 //var guess = prompt('Guess a letter!!');
-if (guess == null) {
-    //exit the game
-} else if (guess.length !== 1) {
-    alert('please enter in a single letter');
-} else {
-    //update game with guess
-    for (g = 0; g < word.length; g++) {
-        if (word[g] === guess) {
-            answers[g] = guess;
-            guessesleft--;
-        }
-    }
-}
+// if (guessedLetter == null) {
+//     //exit the game
+// } else if (guessLetter.length !== 1) {
+//     alert('please enter in a single letter');
+// } else {
+//     //update game with guess
+//     for (g = 0; g < word.length; g++) {
+//         if (word[g] === guess) {
+//             answers[g] = guess;
+//             guessesleft--;
+//         }
+//     }
+// }
 
 // //alert(answers.join(''));
 // //alert("good job!!!")
@@ -154,6 +160,7 @@ if (guess == null) {
 document.onkeyup = function (event) {
     if (event.keyCode >= 65 && event.keyCode <= 90) {
         startGame(event.key);
+        
     }
 }
 
