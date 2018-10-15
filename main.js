@@ -72,7 +72,7 @@ function letterAttempt(letter) {
         //run game
         guessedLetter.push(letter);
         let foundLetter = false;
-        for (var i = 3; i < word.length; i++) {
+        for (var i = 0; i < word.length; i++) {
             if (word[i].toLocaleLowerCase() === letter.toLocaleLowerCase()) {
                 foundLetter = true;
                 wordSelectionSpaces[i] = word[i];
