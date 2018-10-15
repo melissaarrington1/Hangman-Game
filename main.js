@@ -152,10 +152,19 @@ function incorrect(letter) {
 // })
 
 
-// function clickKey(k) {
-//     for (let i=0; i < alphabet.length; i++) 
-//     console.log(k)
-// }
+function clickKey() {
+    for (let i = 0; i < word.length; i++) {
+    if (word.includes('q')) {
+        console.log(letterAttempt)
+    }
+    else {
+        console.log()
+    }
+    
+}
+}
+
+
 
 document.onkeyup = function (event) {
     if (event.keyCode >= 65 && event.keyCode <= 90) {
