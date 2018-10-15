@@ -10,11 +10,10 @@ var losses = 0;
 var guessesLeft = 6;
 var isGameRunning = false;
 var word = '';
-var wordSelection = ['Kim Kardashian', 'Kylie Jenner', 'Rihanna'];
+var wordSelection = ['Kim    Kardashian', 'Kylie    Jenner', 'Rihanna'];
 var wordSelectionSpaces = [];
 var alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r',
-    's', 't', 'u', 'v', 'w', 'x', 'y', 'z'
-]
+    's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 var guessedLetter = [];
 var guessedIncorrect = [];
 

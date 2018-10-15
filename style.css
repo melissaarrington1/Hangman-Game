@@ -2,6 +2,8 @@ body {
     margin: 0;
     padding: 0;
     background-color: rgb(64, 64, 194);
+    background-image: url(images/gradient-background-26046-26731-hd-wallpapers.jpg-1024x640.png);
+    background-size: cover;
 }
 
 canvas {
@@ -14,12 +16,32 @@ canvas {
     background-color: rgb(212, 220, 221);
 }
 .title {
+    font-family: 'Bitter', serif;
     font-size: 100px;
     text-align: center;
+    padding: 20px;
     line-height: 1em;
     color: whitesmoke;
     text-shadow: 0 1px 0 #efefefd3, 0 2px 0 gray,
     0 3px 0 gray, 0 4px 0 gray, 0 30px 5px rgba(0,0,0,.1);
+    animation: animate 4s linear infinite;
+}
+@keyframes animate {
+    0% {
+        transform: rotate(5deg);
+    }
+    25% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(-5deg);
+    }
+    75% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(5deg);
+    }
 }
 .start {
     font-size: 40px;
@@ -39,9 +61,11 @@ canvas {
 }
 .guesses-left {
     font-size: 30px;
+    color: whitesmoke;
 }
 .key {
     font-family: 'Wellfleet', cursive;
+    color: whitesmoke;
     display: inline-block;
     border-color: rgb(70, 70, 168);
     border-radius: 50px;
@@ -73,5 +97,6 @@ canvas {
 }
 #spaces {
     font-size: 80px;
+    color: whitesmoke;
     margin-left: 450px;
 }
