@@ -60,7 +60,11 @@ canvas {
     padding: 50px;
     /*background-color: rgb(70, 70, 168); */
 }
-.guesses-left {
+.guesses {
+    font-size: 30px;
+    color: whitesmoke;
+}
+#guesses-left {
     font-size: 30px;
     color: whitesmoke;
 }

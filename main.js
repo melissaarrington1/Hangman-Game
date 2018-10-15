@@ -19,6 +19,14 @@ var guessedIncorrect = [];
 
 //variable for canvas
 var canvas = document.getElementById('canvas-id');
+var context = canvas.getContext('2d');
+context.strokeStyle = 'purple';
+context.lineWidth = '3';
+context.fillStyle = 'yellow';
+context.fillRect(100, 100, 50, 100);
+context.moveTo(0,300);
+context.lineTo(400,500);
+stroke();
 
 //Create function to start/restart a new game
 function Game() {
@@ -79,7 +87,12 @@ function letterAttempt(letter) {
     }
 }
 
-
+function incorrect(letter) {
+    if (wordSelectionSpaces.indexOf(letter.toLowerCase()) === -1) 
+    //wordSelectionSpaces.indexOf(letter) {
+        guessesLeft--;
+        numofGuessesLeft.textContent = guessesLeft;
+    }
 
 //function to see if win
 
