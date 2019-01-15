@@ -5,6 +5,7 @@ Creating a Hangman Game
 Using HTML, CSS, and Javascript
 
 
-Link to my Trello. https://trello.com/b/mi9Xx7dX/hangmannnnn
+## Link to my Trello. https://trello.com/b/mi9Xx7dX/hangmannnnn
 
-Please visit the website where the game is hosted, http://stoic-shannon-5c148d.netlify.com/
+## Click the link below to play!
+https://zealous-lamport-5d5ca1.netlify.com
