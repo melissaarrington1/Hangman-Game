@@ -1,8 +1,12 @@
-                            ********************** # Project-1 *************************
+# Hangman!
 
-Creating a Hangman Game
+Guess the Hollywood celebrity in this special edition of Hangman!
 
-Using HTML, CSS, and Javascript
+## Built Using
+
+* HTML
+* CSS
+* JavaScript and JQuery
 
 
 ## Link to my Trello. https://trello.com/b/mi9Xx7dX/hangmannnnn
